@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">World Wumpus</string>
+    <dimen name="img_width">40dp</dimen>
+    <dimen name="img_height">40dp</dimen>
+    <dimen name="img_width9">29dp</dimen>
+    <dimen name="img_height9">29dp</dimen>
+    <dimen name="img_width12">22dp</dimen>
+    <dimen name="img_height12">22dp</dimen>
+    <drawable name="img_parede">@mipmap/img_localnaovisitado</drawable>
+    <drawable name="img_player">@mipmap/img_hero</drawable>
+    <drawable name="img_localnaoVisitado">@mipmap/img_localnaovisitado</drawable>
+    <drawable name="img_localVisitado">@mipmap/img_localvisitado</drawable>
+</resources>

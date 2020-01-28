@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/img_telainicial"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TableRow
+            android:gravity="center"
+            android:layout_marginTop="170dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="190dp">
+        <Button
+                android:text="Jogar"
+                android:layout_width="wrap_content"
+                android:onClick="clickAction"
+                android:layout_height="wrap_content" android:id="@+id/btn_jogar"/>
+        <View
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+
+        <Button
+                android:text="Recorde"
+                android:onClick="clickAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_recorde"/>
+    </TableRow>
+    <TableRow
+            android:gravity="center|bottom"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Button
+                android:text="6x6"
+                android:layout_width="wrap_content"
+                android:visibility="invisible"
+                android:onClick="clickAction"
+                android:layout_height="wrap_content" android:id="@+id/btn_6x6"/>
+
+        <View
+                android:layout_width="100dp"
+                android:layout_height="50dp" android:id="@+id/view"/>
+        <Button
+                android:text="9x9"
+                android:layout_width="wrap_content"
+                android:visibility="invisible"
+                android:onClick="clickAction"
+                android:layout_height="wrap_content" android:id="@+id/btn_9x9"/>
+        <View
+                android:layout_width="100dp"
+                android:layout_height="50dp" android:id="@+id/view2"/>
+        <Button
+                android:text="12x12"
+                android:layout_width="wrap_content"
+                android:visibility="invisible"
+                android:onClick="clickAction"
+                android:layout_height="wrap_content" android:id="@+id/btn_12x12"/>
+    </TableRow>
+</androidx.constraintlayout.widget.ConstraintLayout>

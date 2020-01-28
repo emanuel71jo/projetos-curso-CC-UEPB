@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" tools:ignore="MissingDefaultResource">
+
+    <TableLayout
+            android:layout_width="244dp"
+            android:layout_height="match_parent" tools:ignore="MissingConstraints">
+
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Pontuação: 1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" tools:layout_editor_absoluteY="7dp"
+                    android:id="@+id/txt_pontuacao" tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="29dp"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <EditText
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:hint="Nome"
+                    android:id="@+id/edt_jogador"/>
+            <Button
+                    android:text="OK"
+                    android:onClick="clickJogar6"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/btn_ok"/>
+        </TableRow>
+        <TableRow
+                android:layout_marginTop="80dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="Up"
+                    android:visibility="invisible"
+                    android:onClick="jogo6x6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btn_up"/>
+        </TableRow>
+        <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="Left"
+                    android:visibility="invisible"
+                    android:onClick="jogo6x6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_left"/>
+            <Button
+                    android:text="Right"
+                    android:visibility="invisible"
+                    android:onClick="jogo6x6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_right"/>
+        </TableRow>
+        <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="Down"
+                    android:visibility="invisible"
+                    android:onClick="jogo6x6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_down"/>
+        </TableRow>
+        <TableRow
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="Sair"
+                    android:layout_width="wrap_content"
+                    android:onClick="clickSair"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_sair"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+            android:gravity="center"
+            android:layout_marginLeft="230dp"
+            android:layout_marginRight="180dp"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height"
+                    app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView56"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView55"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView54"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView53"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView52"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView51"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView50"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView49"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView57"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_player"
+                    android:id="@+id/img1"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img2"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img3"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img4"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img5"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img6"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView117"/>
+
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView112"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img7"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img8"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img9"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img10"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img11"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height"
+                    app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img12"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView58"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView113"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img13"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img14"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img15"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img16"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img17"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img18"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView59"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView114"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img19"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img20"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img21"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img22"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img23"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img24"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView60"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView115"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img25"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img26"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img27"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img28"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img29"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img30"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView61"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView116"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img31"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img32"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img33"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img34"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img35"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_localnaoVisitado"
+                    android:id="@+id/img36"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView62"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView70"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView69"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView68"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView67"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView66"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView65"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView64"/>
+            <ImageView
+                    android:layout_width="@dimen/img_width"
+                    android:layout_height="@dimen/img_height" app:srcCompat="@drawable/img_parede"
+                    android:id="@+id/imageView63"/>
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+            android:layout_marginLeft="550dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:ignore="MissingConstraints">
+
+        <TableRow
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Flexas 3"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp" tools:layout_editor_absoluteY="7dp"
+                    tools:layout_editor_absoluteX="624dp" android:id="@+id/txt_flexas"
+                    tools:ignore="MissingConstraints"/>
+        </TableRow>
+        <TableRow
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="Atirar"
+                    android:onClick="jogo6x6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_atirar"/>
+        </TableRow>
+        <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="UP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:onClick="clickAtirar"
+                    android:id="@+id/btn_atirarUp"/>
+        </TableRow>
+        <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="LEFT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:onClick="clickAtirar"
+                    android:id="@+id/btn_atirarLeft"/>
+            <Button
+                    android:text="RIGHT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:onClick="clickAtirar"
+                    android:id="@+id/btn_atirarRight"/>
+        </TableRow>
+        <TableRow
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                    android:text="DOWN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:onClick="clickAtirar"
+                    android:id="@+id/btn_atirarDown"/>
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

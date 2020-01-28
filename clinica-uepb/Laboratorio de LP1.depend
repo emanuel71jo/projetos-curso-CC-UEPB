@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1528491586 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\main.c
+	"bibliotecas.h"
+
+1527292024 c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\bibliotecas.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	<windows.h>
+	<conio.h>
+	<conio2.h>
+	<ctype.h>
+	<time.h>
+	<math.h>
+	"structs.h"
+
+1527289953 c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\funcoes.h
+
+1524786957 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\opcoes.c
+
+1527292591 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\login.c
+	"bibliotecas.h"
+
+1525957137 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\menu.c
+	"bibliotecas.h"
+
+1529497326 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\paciente.c
+	"bibliotecas.h"
+
+1528469624 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\aluno.c
+	"bibliotecas.h"
+
+1529495229 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\supervisor.c
+	"bibliotecas.h"
+
+1529493828 c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\structs.h
+
+1529498501 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\agendamento.c
+	"bibliotecas.h"
+
+1528469583 source:c:\users\joão emanuel\onedrive\repositorios git\clinica-uepb\atendimento.c
+	"bibliotecas.h"
+
