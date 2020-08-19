@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing import Any, Sequence, Generic, Optional, Callable, TypeVar, Iterable
+from typing import Any, Sequence, Generic, Optional, Callable, TypeVar, Iterable, Deque
 from typing_extensions import Protocol
 
 '''
@@ -95,6 +95,28 @@ def profundidade(inicial: T, teste_objetivo: Callable[[T], bool], sucessores: Ca
             fronteira.push(Noh(filho, noh_atual))
     return None
 
+def largura(inicial: T, teste_objetivo: Callable[[T], bool], sucessores: Callable[[T], List[T]]) -> Optional[Noh[T]]:
+    fronteira: Fila[Noh[T]] = Fila()
+    fronteira.push(Noh(inicial, None))
+    
+    explorados: Set[T] = { inicial }
+        
+    while not fronteira.vazia:
+        noh_atual: Noh[T] = fronteira.pop()
+        estado_atual: Noh[T] = noh_atual.estado
+        
+        if teste_objetivo(estado_atual):
+            return noh_atual
+        
+        for filho in sucessores(estado_atual):
+            if filho in explorados:
+                continue
+            
+            explorados.add(filho)
+            fronteira.push(Noh(filho, noh_atual))
+    return None
+
+
 def percurso(noh_: Noh[T]) -> List[T]:
     caminho: List[T] = [noh_.estado]
     while noh_.pai is not None:
@@ -103,6 +125,38 @@ def percurso(noh_: Noh[T]) -> List[T]:
     caminho.reverse()
     return caminho
 
-if __name__ == '__main__':
-    print(busca_binaria([1,2,3,4,5,6,7,8,9,10], -1))
-    print(busca_binaria(['s', 'ss'], 's'))
+
+class Fila(Generic[T]):
+    def __init__(self) -> None:
+        self._container: Deque[T] = Deque()
+    
+    @property
+    def vazia(self) -> bool:
+        return not self._container
+    
+    def push(self, item: T) -> None:
+        self._container.append(item)
+        
+    def pop(self) -> T:
+        return self._container.popleft()
+    
+    def __repr__(self) -> str:
+        return repr(self._container)
+
+
+if __name__ == "__main__":
+    # Teste profundidade
+    testeLabirinto: Labirinto = Labirinto()
+    print(testeLabirinto)
+
+    buscaProfundidade: Optional[Noh[Coordenadas]] = profundidade(testeLabirinto.inicial, testeLabirinto.teste_objetivo,
+                        testeLabirinto.sucessores)
+    if buscaProfundidade is None:
+        print('----------')
+        print('Sem solução usando busca em profundidade!')
+    else:
+        print('----------')
+        caminhoDFS: List[Coordenadas] = percurso(buscaProfundidade)
+        testeLabirinto.demarcar(caminhoDFS)
+        print(testeLabirinto)
+        testeLabirinto.remover(caminhoDFS)

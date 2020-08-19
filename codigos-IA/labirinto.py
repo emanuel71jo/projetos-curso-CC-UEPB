@@ -51,8 +51,23 @@ class Labirinto:
 
     if posicao.coluna -1 >= self._colunas and self._grade[posicao.linha][posicao.coluna - 1] != Celula.BLOQUEADA:
       posicoes.append(Coordenadas(posicao.linha, posicao.coluna - 1))
-
     return posicoes
+
+  # Marcar o labirinto com o caminho com sucesso, estado inicial e objetivo
+  def demarcar(self, caminho: List[Coordenadas]):
+    for pos_labirinto in caminho:
+      self._grade[pos_labirinto.linha][pos_labirinto.coluna] = Celula.CAMINHO
+    self._grade[self.inicial.linha][self.inicial.coluna] = Celula.INICIAL
+    self._grade[self.objetivo.linha][self.objetivo.coluna] = Celula.OBJETIVO
+  
+  # Remover um caminho para testar algoritmos diferentes no mesmo labirinto
+  def remover(self, caminho: List[Coordenadas]):
+    for pos_labirinto in caminho:
+      self._grade[pos_labirinto.linha][pos_labirinto.coluna] = Celula.VAZIA
+    self._grade[self.inicial.linha][self.inicial.coluna] = Celula.INICIAL
+    self._grade[self.objetivo.linha][self.objetivo.coluna] = Celula.OBJETIVO
+
+
   
   def __str__(self) -> str:
     saida: str = ''
