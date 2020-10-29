@@ -1,0 +1,12 @@
+{
+  "name": "atividade03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "n-queens.js",
+  "scripts": {
+    "start": "node n-queens.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
